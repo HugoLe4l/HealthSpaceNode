@@ -1,0 +1,50 @@
+.Footer02_AuthPage{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:  rgb(107, 107, 107);
+    padding: 0.5% 2%;
+    box-shadow: 1px 1px 5px rgb(114, 114, 114);
+    background: white;
+    margin-top: 2%;
+}
+.Footer02_AuthPage .Footer02links{
+    display: flex;
+    gap: 5px;
+}
+
+.Footer02_Left{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.Footer02_Right_icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 20px;
+}
+.Footer02_Right_icons i:hover{
+    color: var(--cor-theme);
+    cursor: pointer;
+}
+
+.TextDev{
+    font-size: 12px;
+}
+.TextDev a{
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+.TextDev a:hover{
+    text-decoration: underline;
+    color: var(--cor-theme);
+}

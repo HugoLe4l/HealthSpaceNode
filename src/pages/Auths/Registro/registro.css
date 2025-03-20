@@ -1,0 +1,84 @@
+.Auth_Page .Register_Main_Style{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+}
+.Register_Main_Style .Box_Auth_Register_Left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 40px;
+    padding-left: 10%;
+} 
+.Box_Auth_Register_Left .Registrologo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.Box_Auth_Register_Left .TopicosRegistro{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.Box_Auth_Register_Left h1{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    width: 100%;
+}
+.Box_Auth_Register_Left i{
+    color: #006ab680;
+}
+.Box_Auth_Register_Left ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    list-style: none;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+}
+.Box_Auth_Register_Left .RegistroImage1{
+    width: 450px;
+}
+.Register_Main_Style .Box_Auth_Register_Right{
+    
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+
+@media (max-width: 1200px) {
+    .AuthPageRegister{
+        height: auto;
+       
+    }
+    .Box_Auth_Register_Left .Registrologo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 7%;
+    }
+    .Auth_Page .Register_Main_Style {
+       flex-direction: column;
+       gap: 0px;
+    }
+    .Auth_Page .Box_Auth_Register_Left{
+        width: 100%;
+    }
+    .Box_Auth_Register_Left .RegistroImage1{
+        
+        width: 300px;
+    }
+
+    
+
+  }
