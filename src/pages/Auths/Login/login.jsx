@@ -34,7 +34,7 @@ function LoginPage() {
     useEffect(() => {
         const TokenStorage =  localStorage.getItem("tokenJWT")
         if(TokenStorage){
-            axios.post('http://api-s-health-space.vercel.app/auth/authToken', { token : TokenStorage })
+            axios.post('https://api-s-health-space.vercel.app/auth/authToken', { token : TokenStorage })
             .then( resposta => {
 
                 if(resposta.data['TokenValidade']) {
@@ -63,7 +63,7 @@ function LoginPage() {
         setStatusLoading01Btn(true)
         setStatusBtnSubmit(false)
         setStatusForm(false)
-        axios.post('http://api-s-health-space.vercel.app/auth/login', { EmailInputValue: EmailValue, SenhaInputValue: SenhaValue })
+        axios.post('https://api-s-health-space.vercel.app/auth/login', { EmailInputValue: EmailValue, SenhaInputValue: SenhaValue })
         
             .then(resposta => {
                 

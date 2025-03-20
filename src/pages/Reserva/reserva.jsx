@@ -60,13 +60,13 @@ function ReservaPage() {
     useEffect(() => {
         const TokenStorage = localStorage.getItem("tokenJWT")
         if (TokenStorage) {
-            axios.post('http://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
+            axios.post('https://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
                 .then(resposta => {
 
                     if (resposta.data['TokenValidade']) {
                         const id = resposta.data['tokenDados'].id
                         setIdUsuario(id)
-                        axios.post('http://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
+                        axios.post('https://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
                             .then(resposta => {
                                 setInfosUser(resposta.data['resultado'])
                                 //console.log(resposta.data['resultado'])
@@ -96,7 +96,7 @@ function ReservaPage() {
 
     useEffect(() => {
         console.log(` DADOS RECEBIDOS: ${SelectDataReserva} e ${SelectQuantHoras}`)
-        axios.post("http://api-s-health-space.vercel.app/anuncio/anuncioInfo", { CodigoProduto })
+        axios.post("https://api-s-health-space.vercel.app/anuncio/anuncioInfo", { CodigoProduto })
             .then((resposta) => {
                 setDadosAnuncio(resposta.data['Dados'][0]);
                 console.log(resposta.data['Dados'][0])
@@ -235,7 +235,7 @@ function ReservaPage() {
         console.log("IdAnuncio: " + idAnuncio)
         console.log("QuantHoras: " + QuantHoras)
 
-        axios.post("http://api-s-health-space.vercel.app/anuncio/pagamento", { MetodoPayoutSelecionado, IdUsuario, idAnuncio, QuantHoras })
+        axios.post("https://api-s-health-space.vercel.app/anuncio/pagamento", { MetodoPayoutSelecionado, IdUsuario, idAnuncio, QuantHoras })
 
             //setLoadingState01(true)
             .then((resposta => {

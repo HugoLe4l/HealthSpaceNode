@@ -39,13 +39,13 @@ function AnunciosPage() {
     useEffect(() => {
         const TokenStorage = localStorage.getItem("tokenJWT")
         if (TokenStorage) {
-            axios.post('http://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
+            axios.post('https://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
                 .then(resposta => {
 
                     if (resposta.data['TokenValidade']) {
                         const id = resposta.data['tokenDados'].id
                         //console.log(id)
-                        axios.post('http://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
+                        axios.post('https://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
                             .then(resposta => {
                                 setInfosUser(resposta.data['resultado'])
                                 //console.log(resposta.data['resultado'])
@@ -74,7 +74,7 @@ function AnunciosPage() {
     }, [])
 
     useEffect(() => {
-        axios.post("http://api-s-health-space.vercel.app/anuncio/anuncioInfo", { CodigoProduto })
+        axios.post("https://api-s-health-space.vercel.app/anuncio/anuncioInfo", { CodigoProduto })
             .then((resposta) => {
                 setDadosAnuncio(resposta.data['Dados'][0]);
                 console.log(resposta.data['Dados'][0])

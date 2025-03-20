@@ -21,17 +21,17 @@ function HomePage() {
 
     const [AnuncioHomeList, setAnuncioHomeList] = useState([])
     let localhostGuarda = "localhost:8081"
-    
+
     useEffect(() => {
         const TokenStorage = localStorage.getItem("tokenJWT")
         if (TokenStorage) {
-            axios.post('http://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
+            axios.post('https://api-s-health-space.vercel.app/auth/authToken', { token: TokenStorage })
                 .then(resposta => {
 
                     if (resposta.data['TokenValidade']) {
                         const id = resposta.data['tokenDados'].id
                         //console.log(id)
-                        axios.post('http://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
+                        axios.post('https://api-s-health-space.vercel.app/auth/InfosUser', { id: id })
                             .then(resposta => {
                                 setInfosUser(resposta.data['resultado'])
                                 //console.log(resposta.data['resultado'])
@@ -56,7 +56,7 @@ function HomePage() {
 
         }
 
-        axios.get("http://api-s-health-space.vercel.app/anuncio/listDisponivel")
+        axios.get("https://api-s-health-space.vercel.app/anuncio/listDisponivel")
             .then(resposta => {
                 console.log(resposta.data['resultado'])
                 setAnuncioHomeList(resposta.data['resultado'])

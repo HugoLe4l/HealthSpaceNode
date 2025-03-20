@@ -62,7 +62,7 @@ function RegistroPage() {
         setStatusLoading01Btn(true)
         setStatusBtnSubmit(false)
         setStatusForm(false)
-        axios.post('http://api-s-health-space.vercel.app/auth/registro', { NomeInputValue: InputNome, EmailInputValue: InputEmail, SenhaInputValue01: InputSenha01, SenhaInputValue02: InputSenha02 })
+        axios.post('https://api-s-health-space.vercel.app/auth/registro', { NomeInputValue: InputNome, EmailInputValue: InputEmail, SenhaInputValue01: InputSenha01, SenhaInputValue02: InputSenha02 })
             .then(resposta => {
 
                 if (resposta.data['Verifica_Campos_Preenchido']) { // Todos os campos preenchidos
