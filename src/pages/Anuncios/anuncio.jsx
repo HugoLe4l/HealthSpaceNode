@@ -3,7 +3,6 @@ import { useState, useEffect } from "react"
 import axios from "axios"
 import "./anuncios.css"
 
-import Consultorio1 from "../../../public/Assets/Imagens/Consultorio1.jpg"
 import AvatarUsuario from "../../../../Data/public/Assets/Imagens/user.jpg"
 
 //Components
