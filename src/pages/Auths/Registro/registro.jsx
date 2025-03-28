@@ -118,7 +118,6 @@ function RegistroPage() {
                 setStatusLoading01Btn(false)
                 setStatusBtnSubmit(true)
                 setStatusForm(true)
-                TextRequisicaoResposta.current.textContent = "Houve um error ao tentar realizar o registro. :("
                 console.error('Erro ao enviar os dados:', error);
             });
     }
